@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(itia_tutils)
+SET(CMAKE_CXX_FLAGS "-std=c++0x")
+
+find_package( catkin REQUIRED COMPONENTS
+              roscpp
+              std_msgs
+              itia_futils
+              itia_comau_msgs
+            )
+
+find_package(Eigen3 REQUIRED COMPONENTS)
+
+catkin_package( INCLUDE_DIRS include
+                LIBRARIES itia_tutils
+                CATKIN_DEPENDS roscpp std_msgs itia_futils  itia_comau_msgs
+                DEPENDS system_lib Eigen3
+              )
+
+include_directories( include
+		     ${catkin_INCLUDE_DIRS}
+                     ${Eigen3_INCLUDE_DIRS}
+                    ) 
+
+add_library( itia_tutils src/itia_tutils.cpp )
+            
+add_dependencies( itia_tutils ${catkin_EXPORTED_TARGETS} )

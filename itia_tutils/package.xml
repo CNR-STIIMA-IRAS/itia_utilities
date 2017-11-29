@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package>
+  <name>itia_tutils</name>
+  <version>0.0.1</version>
+  <description>The itia_tutils package: utilities for TRAJECTORIES</description>
+
+  <maintainer email="manuel.beschi@itia.cnr.it">hegel</maintainer>
+
+  <license>TODO</license>
+  <url type="website">https://bitbucket.org/CNR-ITIA/itia_utilities</url>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>itia_rutils</build_depend>
+  <build_depend>itia_futils</build_depend>
+  <build_depend>itia_msgs</build_depend>
+  <build_depend>actionlib</build_depend>
+  <build_depend>control_msgs</build_depend>
+  
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>itia_rutils</run_depend>
+  <run_depend>itia_futils</run_depend>
+  <run_depend>itia_msgs</run_depend>
+  <run_depend>actionlib</run_depend>
+  <run_depend>control_msgs</run_depend>
+
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib"/>
+  </export>
+</package>

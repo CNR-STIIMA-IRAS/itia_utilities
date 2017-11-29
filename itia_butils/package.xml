@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <name>itia_butils</name>
+  <version>0.0.0</version>
+  <description>The itia_butils package</description>
+
+  <maintainer email="enrico.villagrossi@itia.cnr.it">fermi</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>roscpp</build_depend>
+  <build_depend>Boost</build_depend>
+  
+  <run_depend>roscpp</run_depend>
+  <run_depend>Boost</run_depend>
+
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib"/>
+  </export>
+  
+</package>
